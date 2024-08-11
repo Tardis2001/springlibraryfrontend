@@ -1,0 +1,52 @@
+body {
+  background-color: #5390d9;
+  font-family: "Roboto", sans-serif;
+  margin: 0; /* Certifique-se de que o corpo não tenha margem */
+  padding: 0; /* Certifique-se de que o corpo não tenha padding */
+}
+
+.btn-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2; /* Certifique-se de que o botão esteja acima da barra lateral */
+}
+
+.btn-hamburguer {
+  cursor: pointer;
+  border: none;
+  background-color: #f9fafb;
+  padding: 0.5rem 1rem;
+  border-radius: 4px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao botão */
+}
+
+aside {
+  background-color: #fdfbff;
+  width: 18.75rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Certifique-se de que a barra lateral esteja abaixo do botão */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra à barra lateral */
+}
+
+.container {
+  margin: 100px 1.4rem;
+}
+
+.container a {
+  color: #333; /* Altere a cor do texto se necessário */
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 600;
+  display: block;
+  margin: 20px 0; /* Altere a margem para melhor espaçamento */
+  cursor: pointer;
+  transition: color 0.3s; /* Adiciona uma transição suave na cor */
+}
+
+.container a:hover {
+  color: #5390d9; /* Adicione um efeito de hover na cor */
+}

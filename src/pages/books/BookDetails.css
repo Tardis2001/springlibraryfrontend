@@ -1,0 +1,200 @@
+.bookDetailsMain {
+  display: flex;
+  margin-left: 50px;
+  justify-content: center;
+  place-items: center;
+}
+.bookDetails {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 50px;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 550px;
+  padding: 50px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.remove {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+.remove span {
+  transition: 200ms;
+}
+
+.remove .text {
+  transform: translateX(15px);
+  color: white;
+  font-weight: bold;
+}
+
+.remove .icon {
+  position: absolute;
+  border-left: 1px solid #8f1414;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove:hover {
+  background: #ff3636;
+}
+
+.remove:hover .text {
+  color: transparent;
+}
+
+.remove:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.remove:focus {
+  outline: none;
+}
+.booktitledetails {
+  color: rgb(22, 22, 22);
+}
+.bookauthordetails {
+  color: rgb(22, 22, 22);
+}
+.bookImage {
+  width: 400px;
+  height: 500px;
+}
+.removeButton {
+  float: right;
+}
+
+.update {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #6ee637;
+}
+
+.update span {
+  transition: 200ms;
+}
+
+.update .text {
+  transform: translateX(15px);
+  color: white;
+  font-weight: bold;
+}
+
+.update .icon {
+  position: absolute;
+  border-left: 1px solid #28a010;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.update:hover {
+  background: #6ee637;
+}
+
+.update:hover .text {
+  color: transparent;
+}
+
+.update:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.update:focus {
+  outline: none;
+}
+.download {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #3743e6;
+}
+
+.download span {
+  transition: 200ms;
+}
+
+.download .text {
+  transform: translateX(15px);
+  color: white;
+  font-weight: bold;
+}
+
+.download .icon {
+  position: absolute;
+  border-left: 1px solid #2c0ed4;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download:hover {
+  background: #3743e6;
+}
+
+.download:hover .text {
+  color: transparent;
+}
+
+.download:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.download:focus {
+  outline: none;
+}
+.buttons {
+  display: flex;
+  gap: 30px;
+}
