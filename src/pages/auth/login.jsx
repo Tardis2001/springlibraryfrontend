@@ -25,8 +25,7 @@ export default function Login() {
     };
 
     try {
-      console.log("Autenticando...");
-      const response = await api.post("auth/login", data);
+      const response = await api.post("/auth/login", data);
 
       localStorage.setItem("email", email);
       localStorage.setItem("accessToken", response.data.token);
