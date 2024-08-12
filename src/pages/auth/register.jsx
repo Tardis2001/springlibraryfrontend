@@ -20,11 +20,11 @@ export default function Register() {
 
   async function register(e) {
     e.preventDefault();
-    if (password != checkPassword) {
+    if (password !== checkPassword) {
       alert("As senhas não batem, tem certeza que digitou corretamente?");
       return;
     }
-    if (password == "" || email == "" || name == "") {
+    if (password === "" || email === "" || name === "") {
       alert("Um dos campos esta em branco");
       return;
     }

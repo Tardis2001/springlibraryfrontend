@@ -16,7 +16,6 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
   async function login(e) {
     e.preventDefault();
     const data = {
