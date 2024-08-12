@@ -21,6 +21,7 @@ export default function Home() {
       .get("/user/dashboard", {
         headers: {
           Authorization: "Bearer " + token,
+          "ngrok-skip-browser-warning": "69420",
           "Content-Type": "application/json",
         },
       })

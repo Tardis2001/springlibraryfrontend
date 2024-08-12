@@ -24,18 +24,20 @@ export default function ListBooks() {
       .get("/api/books/", {
         headers: {
           Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((response) => {
+        console.log(response.data);
         setBooks(response.data);
         setFilteredBooks(response.data);
+
         // Carregar imagens após os livros
         response.data.forEach((book) => {
           if (book.imagePath) {
             requestImage(book.id, book.imagePath);
           }
         });
-
         setLoading(false);
       })
       .catch((error) => {
@@ -58,6 +60,7 @@ export default function ListBooks() {
         responseType: "arraybuffer",
         headers: {
           Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((res) => {

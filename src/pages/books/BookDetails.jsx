@@ -26,6 +26,7 @@ export default function BookDetails() {
       .get(`/api/books/` + id, {
         headers: {
           Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((response) => {
@@ -49,6 +50,7 @@ export default function BookDetails() {
         responseType: "arraybuffer",
         headers: {
           Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((res) => {
@@ -71,6 +73,7 @@ export default function BookDetails() {
       .get(`/api/books/download/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "69420",
         },
         responseType: "blob", // Certifica-se de que a resposta é tratada como um arquivo
       })
@@ -98,6 +101,7 @@ export default function BookDetails() {
       .delete(`/api/books/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then(() => {

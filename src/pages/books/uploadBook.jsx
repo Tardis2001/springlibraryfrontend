@@ -46,6 +46,7 @@ export default function UploadBook() {
       .post("api/books/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
+          "ngrok-skip-browser-warning": "69420",
           Authorization: "Bearer " + localStorage.getItem("accessToken"),
         },
       })
