@@ -90,7 +90,9 @@ export default function ListBooks() {
   return (
     <div className="listmain">
       {loading ? (
-        <PacmanLoader className="pacman" size={40} />
+        <div className="loader">
+          <PacmanLoader className="pacman" size={40} />
+        </div>
       ) : (
         <div className="listBooksMain">
           <Sidebar />

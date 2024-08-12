@@ -9,7 +9,7 @@ export default function Home() {
   const accessToken = localStorage.getItem("accessToken");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [qntdBooks, setqntdBooks] = useState(0);
+  const [BookData, setBookData] = useState(0);
 
   let token;
   useEffect(() => {
@@ -18,14 +18,14 @@ export default function Home() {
       navigate("/login");
     }
     api
-      .get("/api/books/quantity", {
+      .get("/user/dashboard", {
         headers: {
           Authorization: "Bearer " + token,
           "Content-Type": "application/json",
         },
       })
       .then((response) => {
-        setqntdBooks(response.data);
+        setBookData(response.data);
         setLoading(false);
       })
       .catch((error) => {
@@ -37,7 +37,9 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <PacmanLoader size={40} />
+        <div className="loader">
+          <PacmanLoader size={40} />
+        </div>
       ) : (
         <div className="home">
           <Sidebar />
@@ -45,24 +47,16 @@ export default function Home() {
             <h1>Dashboard</h1>
             <div className="wrapper-box">
               <div className="BoxqntdLivros">
-                <h4 className="title-square">Quantidade total de Livros</h4>
+                <h4 className="title-square">Quantidade total de Uploads</h4>
                 <div className="qntd" style={{ height: "50px" }}>
-                  {qntdBooks}
+                  {BookData.qntdLivros}
                 </div>
               </div>
               <div className="BoxqntdLivros">
-                <h4 className="title-square">Livros Lidos</h4>
-                <div className="qntd" style={{ height: "50px" }}></div>
-              </div>
-              <div className="BoxqntdLivros">
-                <h4 className="title-square">Livros que você deu upload</h4>
-                <div className="qntd" style={{ height: "50px" }}></div>
-              </div>
-              <div className="BoxqntdLivros">
-                <h4 className="title-square">
-                  Quantidade de vezes que você baixou
-                </h4>
-                <div className="qntd" style={{ height: "50px" }}></div>
+                <h4 className="title-square">Quantidade total de Downloads</h4>
+                <div className="qntd" style={{ height: "50px" }}>
+                  {BookData.totalDownloads}
+                </div>
               </div>
             </div>
           </div>

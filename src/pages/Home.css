@@ -23,6 +23,7 @@
 }
 .dashboard-main {
   display: flex;
+  place-content: center;
   gap: 40px;
 }
 .wrapper-box {
@@ -40,4 +41,11 @@
   background-color: #ffe;
   line-height: 50px;
   box-shadow: 2px 2px 5px #999;
+}
+
+.loader {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  place-self: center;
 }

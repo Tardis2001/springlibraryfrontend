@@ -109,7 +109,10 @@ export default function BookDetails() {
         alert("Erro ao deletar o livro.");
       });
   };
-
+  const updateBook = (event) => {
+    event.preventDefault();
+    alert("Nao possuimos essa funcionalidade ainda");
+  };
   if (loading) {
     return <p>Carregando detalhes do livro...</p>;
   }
@@ -148,7 +151,7 @@ export default function BookDetails() {
             </button>
           </div>
           <div className="updateButton">
-            <button className="update noselect">
+            <button onClick={updateBook} className="update noselect">
               <span className="text">Atualizar</span>
               <span className="icon">
                 <GrUpdate size={iconSize} color="white" />
